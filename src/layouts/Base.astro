@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 import Head from "../components/Head.astro";
 
 import Header from "../components/Header.astro";
@@ -8,7 +10,7 @@ const { ...props } = Astro.props;
 ---
 <html>
   <Head title={`lukeonline - ${props.title}`} />
-  <body>
+  <body class="bg-gray-100 w-256 m-auto text-base">
     <Header />
     <main>
       <slot />
