@@ -13,7 +13,7 @@ const { ...props } = Astro.props;
 <html class="bg-gray-200">
   <Head title={`${SITE_TITLE} - ${props.title}`} />
   <body class="w-full md:w-192 m-auto mt-8 text-base p-8">
-    <div class="border-solid border-1 p-8 bg-white">
+    <div class="border-solid border-1 p-8 bg-white flex flex-col gap-4">
       <Header />
       <main>
         <slot />
