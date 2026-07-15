@@ -1,0 +1,25 @@
+{
+  "name": "lukeonline",
+  "version": "0.0.1",
+  "description": "Source for lukeonline.net",
+  "homepage": "https://github.com/LukePJ25/lukeonline#readme",
+  "bugs": {
+    "url": "https://github.com/LukePJ25/lukeonline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukePJ25/lukeonline.git"
+  },
+  "license": "GPL-2.0-or-later",
+  "author": "luke jones",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^7.0.9"
+  }
+}
