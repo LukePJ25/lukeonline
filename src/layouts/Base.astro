@@ -8,13 +8,15 @@ import Footer from "../components/Footer.astro";
 
 const { ...props } = Astro.props;
 ---
-<html>
+<html class="bg-gray-200">
   <Head title={`lukeonline - ${props.title}`} />
-  <body class="bg-gray-100 w-256 m-auto text-base">
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body class="w-full md:w-192 m-auto mt-8 text-base p-8">
+    <div class="border-solid border-1 p-8 bg-white">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
