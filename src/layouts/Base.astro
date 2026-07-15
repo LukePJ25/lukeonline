@@ -6,10 +6,12 @@ import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
+import { SITE_TITLE } from "../consts.ts";
+
 const { ...props } = Astro.props;
 ---
 <html class="bg-gray-200">
-  <Head title={`lukeonline - ${props.title}`} />
+  <Head title={`${SITE_TITLE} - ${props.title}`} />
   <body class="w-full md:w-192 m-auto mt-8 text-base p-8">
     <div class="border-solid border-1 p-8 bg-white">
       <Header />
