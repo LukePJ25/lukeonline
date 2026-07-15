@@ -5,4 +5,10 @@ const { ...props } = Astro.props;
 ---
 <Base title={props.title}>
   <slot />
+  {props.content.map(post => (
+    <div>
+      <span>{post.title}</span>
+      <span>{post.desc}</span>
+    </div>
+  ))}
 </Base>

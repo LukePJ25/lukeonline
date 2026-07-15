@@ -2,10 +2,17 @@
 import ContentList from "../../layouts/ContentList.astro";
 import TextSection from "../../components/TextSection.astro";
 
-const title = "Blogs";
+import { getCollection, getEntry } from 'astro:content';
+
+const title = "Blog";
+
+const blogPosts = await getCollection('blog');
+
+const contentData = blogPosts.map((post) => ({
+  title: post.data.title,
+  desc: `${post.data.desc} - ${post.data.date.toLocaleDateString()}`
+}));
+
+console.log('POSTS: ', blogPosts)
 ---
-<ContentList title={title}>
-  <TextSection>
-    This is a body of text
-  </TextSection>
-</ContentList>
+<ContentList title={title} content={contentData} />

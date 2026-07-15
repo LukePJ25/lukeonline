@@ -12,7 +12,7 @@
   },
   "license": "GPL-2.0-or-later",
   "author": "luke jones",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
