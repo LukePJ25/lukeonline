@@ -1,0 +1,11 @@
+---
+import Favicon from "../assets/Favicon.astro";
+
+const { ...props } = Astro.props;
+---
+<head>
+  <meta charset="utf-8">
+  <Favicon />
+  <title>{props.title}</title>
+</head>
+
