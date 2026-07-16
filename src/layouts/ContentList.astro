@@ -4,7 +4,7 @@ import Base from "./Base.astro";
 const { ...props } = Astro.props;
 
 const postStyling = "flex flex-col bg-gray-50 " +
-  "p-1 pl-3 pr-3 hover:bg-gray-200 "
+  "p-1 pl-3 pr-3 hover:bg-gray-200 focus:bg-blue-50 focus:rounded"
 ---
 <Base title={props.title}>
   <slot />
