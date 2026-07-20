@@ -24,11 +24,10 @@ console.log(post)
 <Base title={post.data.title}>
   <div class="flex flex-col gap-6">
     <div class="flex flex-col gap-2">
-      <span class="flex flex-col">
-        <h1 class="text-2xl font-medium">{post.data.title}</h1>
+      <span class="flex flex-col gap-1">
         <span class="text-sm font-light">{post.data.date.toDateString()}</span>
+        <span class="italic text-gray-600">{post.data.desc}</span>
       </span>
-      <span class="italic text-gray-600">{post.data.desc}</span>
     </div>
     <Content />
   </div>
