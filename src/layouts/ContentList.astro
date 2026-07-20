@@ -1,5 +1,6 @@
 ---
 import Base from "./Base.astro";
+import LargeButtonCol from "../components/LargeButtonCol.astro";
 
 const { ...props } = Astro.props;
 
@@ -8,12 +9,5 @@ const postStyling = "flex flex-col bg-gray-50 " +
 ---
 <Base title={props.title}>
   <slot />
-  <div class="flex flex-col gap-3">
-    {props.content.map(post => (
-      <a class={postStyling} href={post.link}>
-        <span>{post.title}</span>
-        <span class="text-sm font-light">{post.desc}</span>
-      </a>
-    ))}
-  </div>
+  <LargeButtonCol entries={props.content} />
 </Base>

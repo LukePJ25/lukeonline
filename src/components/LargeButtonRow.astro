@@ -1,0 +1,15 @@
+---
+import LargeButton from "./LargeButton.astro";
+
+const { ...props } = Astro.props;
+
+const entries = props.entries;
+---
+<div class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  {entries.map(entry => 
+      <LargeButton title={entry.title}
+                   desc={entry.desc}
+                   link={entry.link}
+        />
+  )}
+</div>

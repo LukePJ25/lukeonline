@@ -1,9 +1,30 @@
 ---
 import Base from "../layouts/Base.astro";
 import Heading from "../components/Heading.astro";
+import LargeButtonRow from "../components/LargeButtonRow.astro";
 
 const title = "Home";
+
+const mainButtonRow = [
+  {
+    "title": "Projects",
+    "desc": "A list of a few of my projects",
+    "link": "/projects"
+  },
+  {
+    "title": "Blog",
+    "desc": "A small blog for occasionally discussing what I'm working on",
+    "link": "/blog"
+  },
+  {
+    "title": "Photos",
+    "desc": "A small gallery of photographs from my free time",
+    "link": "/photos"
+  }
+];
 ---
 <Base title={title}>
-  <p>hello world</p>
+  <p>I'm Luke Jones. I'm studying Computer Science at Aberystwyth
+     University. Right now I'm on my industrial year.</p>
+  <LargeButtonRow entries={mainButtonRow} />
 </Base>
