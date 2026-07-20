@@ -1,5 +1,5 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 
 const blog = defineCollection({
   loader: glob({
@@ -8,4 +8,8 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const photos = defineCollection({
+  loader: file('./src/content/photos/photos.json')
+});
+
+export const collections = { blog, photos };

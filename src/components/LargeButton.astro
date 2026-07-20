@@ -1,11 +1,15 @@
 ---
-const { ...props } = Astro.props;
+const { image, title, desc, link } = Astro.props;
 
 const buttonStyling = "border-solid border-1 border-gray-300" +
   " bg-gray-50 flex flex-col gap-1 p-2 hover:text-blue-500" +
   " hover:underline focus:bg-blue-50 focus:rounded hover:bg-gray-200";
 ---
-<a href={props.link} class={buttonStyling}>
-  {props.title && <span class="font-bold">{props.title}</span>}
-  {props.desc && <span>{props.desc}</span>}
+<a href={link} class={buttonStyling}>
+  {image && <img src={image.link}
+                 alt={image.alt}
+                 class="w-full aspect-4/5"
+  />}
+  {title && <span class="font-bold">{title}</span>}
+  {desc && <span>{desc}</span>}
 </a>
