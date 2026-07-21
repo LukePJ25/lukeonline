@@ -1,7 +1,8 @@
----
+u---
 import Base from "../layouts/Base.astro";
 import Heading from "../components/Heading.astro";
 import LargeButtonRow from "../components/LargeButtonRow.astro";
+import IconButtonRow from "../components/IconButtonRow.astro";
 
 const title = "Home";
 
@@ -22,9 +23,29 @@ const mainButtonRow = [
     "link": "/photos"
   }
 ];
+
+const iconButtonRow = [
+  {
+    image: {
+        link: "/src/assets/github.svg",
+        alt: "GitHub"
+    },
+    link: "https://github.com/LukePJ25"
+  },
+  {
+    image: {
+        link: "/src/assets/linkedin.svg",
+        alt: "Linkedin"
+    },
+    link: "https://www.linkedin.com/in/lukepjones/"
+  }
+];
 ---
 <Base title={title}>
   <p>I'm Luke Jones. I'm studying Computer Science at Aberystwyth
      University. Right now I'm on my industrial year.</p>
-  <LargeButtonRow entries={mainButtonRow} />
+  <div class="flex flex-col gap-2">
+    <LargeButtonRow entries={mainButtonRow} />
+    <IconButtonRow entries={iconButtonRow} />
+  </div>
 </Base>
