@@ -26,7 +26,7 @@ const photoPath = `${photoSourceUrl}${photo.id}${photoExtension}`;
 
 const tableData = {
   "Location": photo.location,
-  "Coordinates": photo.coordinates,
+  "Coordinates":   `${photo.coordinates.x}, ${photo.coordinates.y}`,
   "Tags": photo.tags
 }
 ---
@@ -37,7 +37,6 @@ const tableData = {
     </a>
     <div class="flex flex-col gap-1">
       <span>{photo.desc}</span>
-      <span>{photo.date}</span>
     </div>
     <div>
       <Table rows={tableData} />
