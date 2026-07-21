@@ -12,7 +12,7 @@ const postViewUrl = "/blog/"
 
 const contentData = posts.map((post) => ({
   title: post.data.title,
-  desc: `${post.data.desc} - ${post.data.date.toLocaleDateString()}`,
+  desc: `${post.data.desc} - ${post.data.date.toDateString()}`,
   link: `${postViewUrl}${post.data.slug}`
 }));
 ---
