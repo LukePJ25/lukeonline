@@ -6,7 +6,7 @@ const { ...props } = Astro.props;
 const entries = props.entries;
 ---
 <div class="grid gap-2 grid-cols-1">
-  {entries.map(entry =>   
+  {entries.map(entry =>
       <LargeButton title={entry.title}
                    desc={entry.desc}
                    link={entry.link}

@@ -1,0 +1,37 @@
+---
+import ContentList from "../../layouts/ContentList.astro";
+import TextSection from "../../components/TextSection.astro";
+
+import { getCollection, getEntry } from 'astro:content';
+
+const title = "Projects";
+
+const contentData = [
+  {
+    title: "got",
+    desc: "Basic shell script for quickly storing, managing, and changing-to directories on your machine.",
+    link: "https://github.com/LukePJ25/got"
+  },
+  {
+    title: "JSDiver",
+    desc: "A basic skydiving game implemented through use of the HTML5 Canvas.",
+    link: "/blog/141124"
+  },
+  {
+    title: "Intervle",
+    desc: "Web-based event-ordering game written in PHP with Laravel 12",
+    link: "https://github.com/LukePJ25/Intervle"
+  },
+  {
+    title: "lukeonline",
+    desc: "This website. Rewritten in Astro.",
+    link: "https://github.com/LukePJ25/lukeonline"
+  },
+  {
+    title: "ChickenBoard",
+    desc: "A basic canvas-based drawing program.",
+    link: "https://github.com/LukePJ25/ChickenBoard/"
+  }
+];
+---
+<ContentList title={title} content={contentData} />
