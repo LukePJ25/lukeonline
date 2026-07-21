@@ -1,12 +1,15 @@
 ---
 const { title } = Astro.props;
 
-const linkStyling = "hover:text-blue-500 hover:underline pl-1 " +
-  "grow focus:bg-blue-50 focus:rounded";
+const linkStyling = "border-solid border-1 border-gray-300" +
+  " bg-gray-50 p-1 pl-2 hover:text-blue-500 grow" +
+  " hover:underline focus:bg-blue-50 focus:rounded hover:bg-gray-200" +
+  " items-center gap-3";
+
 ---
 <header class="flex flex-col gap-2">
   <span class="text-xl font-bold">Luke Jones</span>
-  <nav class="flex flex-row justify-between gap-1">
+  <nav class="flex flex-row justify-between gap-2 flex-wrap">
     <a class={linkStyling} href="/">Home</a>
     <a class={linkStyling} href="/projects">Projects</a>
     <a class={linkStyling} href="/blog">Blog</a>
