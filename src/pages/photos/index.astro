@@ -12,12 +12,12 @@ const photoViewUrl = "/photos/";
 const photoThumbUrl = "/photos/thumb/";
 const photoExtension = ".jpg";
 
-const contentData = photos.map((photo) => ({
-  desc: `${photo.data.date}`,
-  link: `${photoViewUrl}${photo.data.id}`,
+const contentData = photos[0].data.map((photo) => ({
+  desc: `${photo.date}`,
+  link: `${photoViewUrl}${photo.id}`,
   image: {
-    link: `${photoThumbUrl}${photo.data.id}${photoExtension}`,
-    alt: `${photo.data.desc}`
+    link: `${photoThumbUrl}${photo.id}${photoExtension}`,
+    alt: `${photo.desc}`
   }
 }));
 ---
