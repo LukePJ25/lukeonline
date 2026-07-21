@@ -1,0 +1,46 @@
+---
+import Base from "../../layouts/Base.astro";
+import Table from "../../components/Table.astro";
+
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const photos = await getCollection("photos");
+
+  return photos.map((photo) => ({
+    params: {
+      id: photo.id,
+    },
+    props: {
+      photo,
+    },
+  }));
+}
+
+const { photo } = Astro.props;
+
+const photoSourceUrl = "/photos/source/";
+const photoExtension = ".jpg";
+
+const photoPath = `${photoSourceUrl}${photo.data.id}${photoExtension}`;
+
+const tableData = {
+  "Location": photo.data.location,
+  "Coordinates": photo.data.coordinates,
+  "Tags": photo.data.tags
+}
+---
+<Base title={photo.data.date}>
+  <div class="flex flex-col gap-4">
+    <a href={photoPath}>
+      <img src={photoPath} alt={photo.data.desc} />
+    </a>
+    <div class="flex flex-col gap-1">
+      <span>{photo.data.desc}</span>
+      <span>{photo.data.date}</span>
+    </div>
+    <div>
+      <Table rows={tableData} />
+    </div>
+  </div>
+</Base>

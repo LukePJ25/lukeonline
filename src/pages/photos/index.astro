@@ -10,16 +10,15 @@ const photos = await getCollection('photos');
 
 const photoViewUrl = "/photos/";
 const photoThumbUrl = "/photos/thumb/";
+const photoExtension = ".jpg";
 
 const contentData = photos.map((photo) => ({
   desc: `${photo.data.date}`,
   link: `${photoViewUrl}${photo.data.id}`,
   image: {
-    link: `${photoThumbUrl}${photo.data.id}`,
+    link: `${photoThumbUrl}${photo.data.id}${photoExtension}`,
     alt: `${photo.data.desc}`
   }
 }));
-
-console.log(contentData)
 ---
 <ContentGrid title={title} content={contentData} />
