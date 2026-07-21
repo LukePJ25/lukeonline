@@ -8,6 +8,8 @@ const title = "Blog";
 
 const posts = await getCollection('blog');
 
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
 const postViewUrl = "/blog/"
 
 const contentData = posts.map((post) => ({
