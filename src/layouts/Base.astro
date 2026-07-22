@@ -10,7 +10,7 @@ import { SITE_TITLE } from "../consts.ts";
 
 const { ...props } = Astro.props;
 ---
-<html class="bg-gray-200">
+<html>
   <Head title={`${SITE_TITLE} - ${props.title}`} />
   <body class="w-full md:w-192 md:m-auto text-base p-2 md:p-8">
     <div class="border-solid border-1 p-8 bg-white flex flex-col gap-5">
