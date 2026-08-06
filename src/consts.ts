@@ -1,1 +1,1 @@
-export const SITE_TITLE = 'lukeonline';
+export const SITE_TITLE = 'lukeonline'

@@ -1,24 +1,25 @@
 ---
-import ContentGrid from "../../layouts/ContentGrid.astro";
-import TextSection from "../../components/TextSection.astro";
+import ContentGrid from '../../layouts/ContentGrid.astro'
+import TextSection from '../../components/TextSection.astro'
 
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content'
 
-const title = "Photos";
+const title = 'Photos'
 
-const photos = await getCollection('photos');
+const photos = await getCollection('photos')
 
-const photoViewUrl = "/photos/";
-const photoThumbUrl = "/photos/thumb/";
-const photoExtension = ".jpg";
+const photoViewUrl = '/photos/'
+const photoThumbUrl = '/photos/thumb/'
+const photoExtension = '.jpg'
 
 const contentData = photos[0].data.map((photo) => ({
   desc: `${photo.date}`,
   link: `${photoViewUrl}${photo.id}`,
   image: {
     link: `${photoThumbUrl}${photo.id}${photoExtension}`,
-    alt: `${photo.desc}`
-  }
-}));
+    alt: `${photo.desc}`,
+  },
+}))
 ---
+
 <ContentGrid title={title} content={contentData} />

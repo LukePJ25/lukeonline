@@ -1,20 +1,22 @@
 ---
-const { rows } = Astro.props;
+const { rows } = Astro.props
 ---
+
 <table class="w-full table-auto">
-  {Object.entries(rows).map(([param, value]) => (
-    <tr class="p-4 even:bg-gray-50 odd:bg-gray-100 w-full">
-      <td class="p-2 pl-4 pr-4 italic">{param}</td>
-      <td class="flex flex-row gap-2 p-2 pl-4 pr-4 h-auto flex-wrap">
-      {
-        Array.isArray(value) ?  
-          value.map(item => 
-            <span class="bg-gray-600 text-white p-1/2 pl-2 pr-2 rounded-sm">
-              {item}
-            </span>
-          ) 
-          : value ?? '-'}
-      </td>
-    </tr>
-  ))}
+  {
+    Object.entries(rows).map(([param, value]) => (
+      <tr class="w-full p-4 odd:bg-gray-100 even:bg-gray-50">
+        <td class="p-2 pr-4 pl-4 italic">{param}</td>
+        <td class="flex h-auto flex-row flex-wrap gap-2 p-2 pr-4 pl-4">
+          {Array.isArray(value)
+            ? value.map((item) => (
+                <span class="p-1/2 rounded-sm bg-gray-600 pr-2 pl-2 text-white">
+                  {item}
+                </span>
+              ))
+            : (value ?? '-')}
+        </td>
+      </tr>
+    ))
+  }
 </table>

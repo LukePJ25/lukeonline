@@ -1,37 +1,44 @@
 ---
-import Base from "../../layouts/Base.astro";
-import Heading from "../../components/Heading.astro";
-import LargeButtonCol from "../../components/LargeButtonCol.astro";
+import Base from '../../layouts/Base.astro'
+import Heading from '../../components/Heading.astro'
+import LargeButtonCol from '../../components/LargeButtonCol.astro'
 
-const title = "About";
+const title = 'About'
 
 const contactMethods = [
   {
-    title: "luke.jones.2567@gmail.com",
-    desc: "E-mail",
-    link: "mailto:luke.jones.2567@gmail.com"
-  }
-];
+    title: 'luke.jones.2567@gmail.com',
+    desc: 'E-mail',
+    link: 'mailto:luke.jones.2567@gmail.com',
+  },
+]
 ---
+
 <Base title={title}>
-  <p>My name is Luke Jones. I'm a student at Aberystwyth University, 
-  studying for a BSc in Computer Science with an Integrated Year in 
-  Industry.</p> 
+  <p>
+    My name is Luke Jones. I'm a student at Aberystwyth University, studying for
+    a BSc in Computer Science with an Integrated Year in Industry.
+  </p>
 
-  <p>I am currently on said industry year, doing a placement in Bath, 
-  England.</p>
+  <p>
+    I am currently on said industry year, doing a placement in Bath, England.
+  </p>
 
-  <p>Outside of my degree I spend a fair amount of time playing around with 
-  slightly-more gimmicky computers, as well some photography when I can 
-  manage. I also have a pretty heavy interest in the history of British Road 
-  infrastructure, though that's less relevant to my career aspirations...</p> 
+  <p>
+    Outside of my degree I spend a fair amount of time playing around with
+    slightly-more gimmicky computers, as well some photography when I can
+    manage. I also have a pretty heavy interest in the history of British Road
+    infrastructure, though that's less relevant to my career aspirations...
+  </p>
 
-  <Heading level={2}>Contact</Heading> 
-  <p>Right now I'd prefer e-mail as the first point-of-contact, but I'll open 
-    up more methods in the future. I ask that this is used for serious 
-    communications only. Anything else will be respectfully ignored.</p>
+  <Heading level={2}>Contact</Heading>
+  <p>
+    Right now I'd prefer e-mail as the first point-of-contact, but I'll open up
+    more methods in the future. I ask that this is used for serious
+    communications only. Anything else will be respectfully ignored.
+  </p>
 
   <LargeButtonCol entries={contactMethods} />
 
-  <span class="italic text-gray-500">Last Updated August 2026</span>
+  <span class="text-gray-500 italic">Last Updated August 2026</span>
 </Base>

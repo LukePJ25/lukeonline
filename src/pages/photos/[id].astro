@@ -1,11 +1,11 @@
 ---
-import Base from "../../layouts/Base.astro";
-import Table from "../../components/Table.astro";
+import Base from '../../layouts/Base.astro'
+import Table from '../../components/Table.astro'
 
-import { getCollection, render } from "astro:content";
+import { getCollection, render } from 'astro:content'
 
 export async function getStaticPaths() {
-  const photos = await getCollection("photos");
+  const photos = await getCollection('photos')
 
   return photos[0].data.map((photo) => ({
     params: {
@@ -14,28 +14,29 @@ export async function getStaticPaths() {
     props: {
       photo,
     },
-  }));
+  }))
 }
 
-const { photo } = Astro.props;
+const { photo } = Astro.props
 
-const photoSourceUrl = "/photos/source/";
-const photoExtension = ".jpg";
+const photoSourceUrl = '/photos/source/'
+const photoExtension = '.jpg'
 
-let coordString = 'None';
+let coordString = 'None'
 
 if (photo.coordinates) {
   coordString = `${photo.coordinates.x}, ${photo.coordinates.y}`
 }
 
-const photoPath = `${photoSourceUrl}${photo.id}${photoExtension}`;
+const photoPath = `${photoSourceUrl}${photo.id}${photoExtension}`
 
 const tableData = {
-  "Location": photo.location,
-  "Coordinates": coordString,
-  "Tags": photo.tags
+  Location: photo.location,
+  Coordinates: coordString,
+  Tags: photo.tags,
 }
 ---
+
 <Base title={photo.date}>
   <div class="flex flex-col gap-4">
     <a href={photoPath}>

@@ -1,12 +1,14 @@
 ---
-import Base from "./Base.astro";
-import LargeButtonCol from "../components/LargeButtonCol.astro";
+import Base from './Base.astro'
+import LargeButtonCol from '../components/LargeButtonCol.astro'
 
-const { ...props } = Astro.props;
+const { ...props } = Astro.props
 
-const postStyling = "flex flex-col bg-gray-50 " +
-  "p-1 pl-3 pr-3 hover:bg-gray-200 focus:bg-blue-50 focus:rounded"
+const postStyling =
+  'flex flex-col bg-gray-50 ' +
+  'p-1 pl-3 pr-3 hover:bg-gray-200 focus:bg-blue-50 focus:rounded'
 ---
+
 <Base title={props.title}>
   <slot />
   <LargeButtonCol entries={props.content} />

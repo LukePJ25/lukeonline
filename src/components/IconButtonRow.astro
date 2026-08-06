@@ -1,15 +1,11 @@
 ---
-import IconButton from "./IconButton.astro";
+import IconButton from './IconButton.astro'
 
-const { ...props } = Astro.props;
+const { ...props } = Astro.props
 
-const entries = props.entries;
+const entries = props.entries
 ---
-<div class="flex gap-2 flex-row flex-wrap">
-  {entries.map(entry => 
-      <IconButton image={entry.image}
-                  link={entry.link}
-        />
-  )}
-</div>
 
+<div class="flex flex-row flex-wrap gap-2">
+  {entries.map((entry) => <IconButton image={entry.image} link={entry.link} />)}
+</div>
