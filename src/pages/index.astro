@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro'
-import Heading from '../components/Heading.astro'
 import LargeButtonRow from '../components/LargeButtonRow.astro'
 import IconButtonRow from '../components/IconButtonRow.astro'
 import Webring from '../components/Webring.astro'
@@ -50,7 +49,7 @@ const iconButtonRow = [
   </p>
   <div class="flex flex-col gap-2">
     <LargeButtonRow entries={mainButtonRow} />
-    <div class="flex flex-row justify-between">
+    <div class="flex flex-col justify-between gap-2 sm:flex-row">
       <IconButtonRow entries={iconButtonRow} />
       <Webring />
     </div>

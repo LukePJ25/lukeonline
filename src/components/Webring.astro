@@ -4,8 +4,13 @@ import { BUTTON_STYLING_SHARED } from '../consts.ts'
 const buttonStyling = BUTTON_STYLING_SHARED + ' flex-row h-8 items-center gap-2'
 ---
 
-<div class="flex flex-row gap-2">
-  <a class={buttonStyling} href="https://aberwebr.ing/lukep/left">◀</a>
-  <a class={buttonStyling} href="https://aberwebr.ing/">aberWebRing</a>
-  <a class={buttonStyling} href="https://aberwebr.ing/lukep/right">▶</a>
-</div>
+<>
+  <hr class="border-gray-400" />
+  <div class="flex flex-row gap-2">
+    <a class={buttonStyling} href="https://aberwebr.ing/lukep/left">◀</a>
+    <a class={buttonStyling + ' grow'} href="https://aberwebr.ing/"
+      >aberWebRing</a
+    >
+    <a class={buttonStyling} href="https://aberwebr.ing/lukep/right">▶</a>
+  </div>
+</>
