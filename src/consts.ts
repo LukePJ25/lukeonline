@@ -14,3 +14,8 @@ export const BUTTON_STYLING_SHARED =
   ` ${BUTTON_ACTIVE_GRADIENT} active:shadow-none ${BUTTON_ACTIVE_INSET}` +
   ' transition duration-150' +
   ' active:duration-50'
+
+export const BASE_LAYOUT_STYLING =
+  'flex flex-col gap-3 p-6' +
+  ' rounded border border-gray-600 shadow-lg' +
+  ' bg-linear-to-t from-gray-100 to-white'
