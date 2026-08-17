@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/LukePJ25/lukeonline.git"
   },
-  "license": "GPL-2.0-or-later",
+  "license": "GPL-3.0-only",
   "author": "luke jones",
   "type": "module",
   "main": "index.js",
