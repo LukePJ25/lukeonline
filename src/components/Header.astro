@@ -1,11 +1,9 @@
 ---
+import { BUTTON_STYLING_SHARED } from '../consts.ts'
 const { title } = Astro.props
 
 const linkStyling =
-  'border-solid border-1 border-gray-300' +
-  ' bg-gray-50 p-1 pl-2 hover:text-blue-500 grow' +
-  ' hover:underline focus:bg-blue-50 focus:rounded hover:bg-gray-200' +
-  ' items-center gap-3'
+  BUTTON_STYLING_SHARED + ' h-8 p-1 pl-2 grow items-center gap-3'
 ---
 
 <header class="flex flex-col gap-2">

@@ -1,11 +1,8 @@
 ---
+import { BUTTON_STYLING_SHARED } from '../consts.ts'
 const { image, link } = Astro.props
 
-const buttonStyling =
-  'border-solid border-1 border-gray-300' +
-  ' bg-gray-50 flex flex-row gap-1 p-2 hover:text-blue-500' +
-  ' hover:underline focus:bg-blue-50 focus:rounded hover:bg-gray-200' +
-  ' items-center gap-3'
+const buttonStyling = BUTTON_STYLING_SHARED + ' flex-row items-center gap-3'
 ---
 
 <a href={link} class={buttonStyling}>

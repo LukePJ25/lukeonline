@@ -1,9 +1,7 @@
 ---
-const buttonStyling =
-  'border-solid border-1 border-gray-300' +
-  ' bg-gray-50 flex flex-row gap-1 p-2 h-8 hover:text-blue-500' +
-  ' hover:underline focus:bg-blue-50 focus:rounded hover:bg-gray-200' +
-  ' items-center gap-2'
+import { BUTTON_STYLING_SHARED } from '../consts.ts'
+
+const buttonStyling = BUTTON_STYLING_SHARED + ' flex-row h-8 items-center gap-2'
 ---
 
 <div class="flex flex-row gap-2">
